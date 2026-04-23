@@ -8,7 +8,7 @@ Each skill execution is logged as a trial with:
   - preview.mp4  (MuJoCo preview animation, if applicable)
   - camera.mp4   (cam_base recording during execution)
 
-Output: ~/kinam_dev/RealRobotCLI/output/YYYYMMDD_HHMMSS/
+Output: <this_repo>/output/YYYYMMDD_HHMMSS/
 """
 
 import sys

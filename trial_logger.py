@@ -1,7 +1,7 @@
 """Trial logger -- record commands, preview, and camera video per trial.
 
 Directory structure:
-  ~/kinam_dev/RealRobotCLI/output/
+  <repo_root>/output/
     YYYYMMDD_HHMMSS/                   # session
       session_log.json                 # all commands + timestamps
       trial_001_detect/                # per-trial
