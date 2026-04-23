@@ -27,20 +27,26 @@ from trial_logger import TrialLogger
 
 
 def print_banner():
-    print("\n" + "=" * 58)
+    print("\n" + "=" * 62)
     print("  RealRobotCLI -- Skill-based Robot Control")
-    print("=" * 58)
-    print("  Chat mode -- natural language robot control")
-    print("  Copilot CLI parses commands into skill sequences")
+    print("=" * 62)
+    print("  Natural language → Copilot CLI → skill plan → execute")
     print()
-    print('  e.g.: "detect the cube"')
-    print('        "move 5cm above cube"')
-    print('        "pick up cube and place left 10cm"')
-    print('        "show status"')
+    print("  Quick start commands:")
+    print("  ─────────────────────────────────────────────────────")
+    print('  "detect the cube"              detect cube 6D pose')
+    print('  "move 5cm above the cube"      move to offset pos')
+    print('  "close gripper"                grip the object')
+    print('  "lift 3cm"                     lift straight up')
+    print('  "pick up cube and lift 5cm"    full sequence')
+    print('  "go home"                      return to home pos')
+    print('  "show status"                  print robot state')
     print()
-    print("  /help   -- help")
-    print("  /quit   -- quit")
-    print("=" * 58 + "\n")
+    print("  Slash commands:")
+    print("  ─────────────────────────────────────────────────────")
+    print("  /help   show this message")
+    print("  /quit   exit")
+    print("=" * 62 + "\n")
 
 
 
