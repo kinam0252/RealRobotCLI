@@ -279,18 +279,13 @@ def _():
 # -- CLI --
 print("\n[CLI]")
 
-@test("grasp_cli imports and has Cartesian mode")
+@test("grasp_cli imports and has chat mode")
 def _():
-    from grasp_cli import KEY_TO_SKILL, print_banner, execute_plan
-    assert len(KEY_TO_SKILL) == 9
-
-# -- Preview Viewer --
-print("\n[Preview Viewer]")
-
-@test("preview_viewer.py syntax valid")
-def _():
-    import py_compile
-    py_compile.compile(os.path.join(CLI_DIR, 'preview_viewer.py'), doraise=True)
+    from grasp_cli import print_banner, execute_plan, chat_loop
+    # Verify key mode was removed
+    import grasp_cli
+    assert not hasattr(grasp_cli, 'KEY_TO_SKILL'), "KEY_TO_SKILL should be removed"
+    assert not hasattr(grasp_cli, 'key_loop'), "key_loop should be removed"
 
 # -- Trial Logger --
 print("\n[Trial Logger]")
