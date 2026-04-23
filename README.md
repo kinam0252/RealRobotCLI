@@ -1,34 +1,30 @@
 # RealRobotCLI
 
-A skill-based conversational CLI for controlling a **Franka FR3** robot arm with natural language.
+Natural language → **Copilot CLI (LLM)** → skill plan → **Franka FR3** robot execution.
 
-Type a plain-English command → **Copilot CLI (LLM)** converts it into a JSON skill plan → skills execute sequentially on the real robot.
-
----
-
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
-# 1. Clone
 git clone https://github.com/kinam0252/RealRobotCLI.git
 cd RealRobotCLI
-
-# 2. Activate the conda environment
 conda activate env_train
-
-# 3. Make sure the Franka ROS 2 driver is running, then launch
 python grasp_cli.py
 ```
 
-> **Note:** This repo shares the machine at `~/kinam_dev/`. External dependencies
-> (FoundationPose, IK solver, MuJoCo models, camera calibration) are referenced
-> via absolute paths in `config.py`. No extra setup needed — just clone and run.
+```
+>> pick up cube and lift 5cm
+```
+
+That's it. The LLM breaks your command into skills (detect → grasp → lift) and runs them on the real robot.
+
+> **Same machine?** All external paths (FoundationPose, IK solver, calibration) are
+> already configured in `config.py`. Just clone and run.
 
 ### Optional flags
 
 | Flag | Description |
 |------|-------------|
-| `--no-preview` | Skip MuJoCo trajectory preview (text-only confirmation) |
+| `--no-preview` | Skip MuJoCo trajectory preview |
 | `--no-log` | Disable per-trial logging |
 
 ---
