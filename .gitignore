@@ -5,3 +5,7 @@ __pycache__/
 output/
 *.mp4
 *.avi
+
+# Visualization (local only)
+replay_preview.py
+preview_viewer.py
